@@ -1,5 +1,12 @@
+import { Header } from "components";
+import { Container } from "./style";
+
 function Main() {
-  return <div>instapro coding challenge</div>;
+  return (
+    <Container>
+      <Header></Header>
+    </Container>
+  );
 }
 
 export default Main;
