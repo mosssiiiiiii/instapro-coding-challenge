@@ -1,5 +1,5 @@
-function App() {
+function Main() {
   return <div>instapro coding challenge</div>;
 }
 
-export default App;
+export default Main;
