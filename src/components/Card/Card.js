@@ -1,4 +1,4 @@
-import { Fragment, memo } from "react";
+import { memo } from "react";
 import { Wrapper } from "./style";
 
 const Card = ({ cards }) => {
@@ -13,4 +13,4 @@ const Card = ({ cards }) => {
   );
 };
 
-export default memo(Card);
+export default Card;
