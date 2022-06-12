@@ -1,4 +1,4 @@
-import { Add, Header, HorizontalScroll } from "components";
+import { Add, Column, Header, HorizontalScroll } from "components";
 import { Container, AddList } from "./style";
 import _uniqueId from "lodash/uniqueId";
 import { useState } from "react";
@@ -32,6 +32,8 @@ function Main() {
     <Container>
       <Header />
       <HorizontalScroll>
+        <Column columns={columns} setColumns={setColumns} />
+
         <AddList>
           <Add title="Add a new column" onClick={(ref) => addColumn(ref)} />
         </AddList>
