@@ -24,7 +24,7 @@ const Column = ({ columns, setColumns }) => {
   };
 
   return (
-    <div data-testid="column-list">
+    <>
       {columns.map((clm) => (
         <Wrapper data-testid="column" key={clm.id}>
           <Title>{clm.name}</Title>
@@ -37,7 +37,7 @@ const Column = ({ columns, setColumns }) => {
           </ColumnItem>
         </Wrapper>
       ))}
-    </div>
+    </>
   );
 };
 
