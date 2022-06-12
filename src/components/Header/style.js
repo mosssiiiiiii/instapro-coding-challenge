@@ -1,7 +1,8 @@
+import { HEADER_HEIGHT } from "setup/variables";
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: 90px;
+  height: ${HEADER_HEIGHT};
   padding: 15px 30px 0 30px;
 `;
 
