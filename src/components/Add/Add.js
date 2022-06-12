@@ -19,7 +19,9 @@ const Add = ({ title, onClick }) => {
       onClick={() => setShow(true)}
     >
       {!show ? (
-        <Title onClick={() => setShow(true)}> + {title}</Title>
+        <Title onClick={() => setShow(true)}>
+          <span>+</span> {title}
+        </Title>
       ) : (
         <>
           <TextInput

@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   cursor: pointer;
   margin-bottom: 15px;
-  background-color: #d0d8e6;
+  background-color: #d6e0f3;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,17 @@ const Wrapper = styled.div`
 
 const Title = styled.div`
   color: #063489;
+
+  span {
+    width: 18px;
+    height: 18px;
+    line-height: 16px;
+    background-color: #1e4fa7;
+    border-radius: 12px;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+  }
 `;
 
 const ButtonWrap = styled.div`
@@ -31,7 +42,7 @@ const CloseButton = styled.button`
 `;
 
 const AddButton = styled.button`
-  background-color: #1e4fa7;
+  background-color: #5eae57;
   height: 35px;
   color: #fff;
   border: none;
