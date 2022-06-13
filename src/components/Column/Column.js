@@ -1,10 +1,10 @@
 import { memo } from "react";
-import Add from "components/Add";
+import { Add } from "components";
 import { Wrapper, Title, ColumnItem } from "./style";
 import _uniqueId from "lodash/uniqueId";
 import Card from "components/Card";
 
-const Column = ({ columns, setColumns }) => {
+const Column = ({ columns, setColumns, setSelectedCard }) => {
   const addCard = (columnId, ref) => {
     if (!ref.current.value) {
       return null;
@@ -29,7 +29,11 @@ const Column = ({ columns, setColumns }) => {
         <Wrapper data-testid="column" key={clm.id}>
           <Title>{clm.name}</Title>
           <ColumnItem>
-            <Card cards={clm.cards} />
+            <Card
+              setSelectedCard={setSelectedCard}
+              cards={clm.cards}
+              columnId={clm.id}
+            />
             <Add
               title="Add a new card"
               onClick={(ref) => addCard(clm.id, ref)}
