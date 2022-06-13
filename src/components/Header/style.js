@@ -33,4 +33,31 @@ const Title = styled.div`
   }
 `;
 
-export { Container, Wrapper, Logo, Title };
+const IconWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`;
+
+const Icon = styled.div`
+  border: 1px solid #4a4a4a;
+  border-radius: 6px;
+  padding: 3px 5px;
+  margin-left: 15px;
+`;
+
+const AboutUs = styled.a`
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  border-radius: 6px;
+  background-color: #1e4fa7;
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+  cursor: pointer;
+`;
+
+export { Container, Wrapper, Logo, Title, IconWrap, Icon, AboutUs };
