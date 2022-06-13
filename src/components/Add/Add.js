@@ -24,11 +24,7 @@ const Add = ({ title, onClick }) => {
         </Title>
       ) : (
         <>
-          <TextInput
-            name="add-input"
-            placeholder="Add new Card"
-            inputRef={ref}
-          />
+          <TextInput name="add-input" placeholder={title} inputRef={ref} />
           <ButtonWrap>
             <CloseButton
               data-testid="close-button"

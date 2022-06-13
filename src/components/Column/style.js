@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  min-width: 250px;
+  min-width: 280px;
+  max-width: 280px;
   display: block;
   margin-right: 15px;
 `;

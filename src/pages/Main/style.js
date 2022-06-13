@@ -9,8 +9,8 @@ const Container = styled.div`
 `;
 
 const AddList = styled.div`
-  min-width: 250px;
-  max-width: 250px;
+  min-width: 270px;
+  max-width: 270px;
   height: 50px;
   padding: 0 10px;
   margin-top: 65px;
