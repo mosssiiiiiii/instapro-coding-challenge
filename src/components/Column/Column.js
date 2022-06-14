@@ -2,6 +2,7 @@ import { memo } from "react";
 import { Add } from "components";
 import { Wrapper, Title, ColumnItem } from "./style";
 import _uniqueId from "lodash/uniqueId";
+import moment from "moment";
 import Card from "components/Card";
 
 const Column = ({ columns, setColumns, setSelectedCard }) => {
@@ -14,8 +15,9 @@ const Column = ({ columns, setColumns, setSelectedCard }) => {
     const card = {
       name: ref.current.value,
       id: _uniqueId("crd-"),
+      createdDate: moment().format("MMM Do YY"),
     };
-
+    console.log();
     cloneColumns.forEach((item) => {
       if (item.id === columnId) item.cards.push(card);
     });
