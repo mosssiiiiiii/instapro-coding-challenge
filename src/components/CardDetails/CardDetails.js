@@ -24,7 +24,12 @@ const CardDetails = ({
     cloneSelectedCard.desc = [ref.current.value];
 
     setColumns(cloneColumns);
+
+    //clear input
     ref.current.value = "";
+
+    //close the modal
+    setSelectedCard(null);
   };
 
   const cardMove = (e) => {
@@ -40,10 +45,12 @@ const CardDetails = ({
       (item) => item.id !== selectedCard.id
     );
 
+    //
     const card = {
       name: selectedCard.name,
       id: selectedCard.id,
       desc: selectedCard.desc,
+      createdDate: selectedCard.createdDate,
     };
     selectedCol.cards = filteredCards;
 
@@ -52,6 +59,9 @@ const CardDetails = ({
     });
 
     setColumns(cloneColumns);
+
+    //close the modal
+    setSelectedCard(null);
   };
 
   return (

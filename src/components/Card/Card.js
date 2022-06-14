@@ -1,4 +1,4 @@
-import { Wrapper, Title, Description } from "./style";
+import { Wrapper, Title, Description, Date } from "./style";
 
 const Card = ({ cards, setSelectedCard, columnId }) => {
   return (
@@ -13,6 +13,7 @@ const Card = ({ cards, setSelectedCard, columnId }) => {
         >
           <Title>{crd?.name}</Title>
           <Description>{crd?.desc}</Description>
+          <Date>{crd?.createdDate}</Date>
         </Wrapper>
       ))}
     </>

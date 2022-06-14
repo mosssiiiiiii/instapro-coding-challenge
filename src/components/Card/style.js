@@ -27,4 +27,11 @@ const Description = styled.p`
   -webkit-box-orient: vertical;
 `;
 
-export { Title, Description, Wrapper };
+const Date = styled.div`
+  color: #4a4a4a;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 10px;
+`;
+
+export { Title, Description, Wrapper, Date };
