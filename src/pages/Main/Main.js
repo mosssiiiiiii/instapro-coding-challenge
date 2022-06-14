@@ -2,12 +2,11 @@ import { Add, CardDetails, Column, Header, HorizontalScroll } from "components";
 import { Container, AddList } from "./style";
 import _uniqueId from "lodash/uniqueId";
 import { useMemo, useState } from "react";
+import useStore from "hooks/useStore";
 
 function Main() {
-  const [columns, setColumns] = useState([
-    { name: "Doing", id: _uniqueId("clm-"), cards: [] },
-    { name: "Done", id: _uniqueId("clm-"), cards: [] },
-  ]);
+  const [columns, setColumns] = useStore("column");
+
   const [selectedCard, setSelectedCard] = useState(null);
   const selectedColumnIndex = useMemo(() => {
     return columns?.findIndex((item) => item.id === selectedCard?.columnId);
@@ -31,8 +30,6 @@ function Main() {
     //clean input value
     ref.current.value = "";
   };
-
-  console.log("hello mohsen");
 
   return (
     <Container>
