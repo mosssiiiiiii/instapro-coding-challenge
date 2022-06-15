@@ -1,12 +1,6 @@
-import _uniqueId from "lodash/uniqueId";
 import { useState } from "react";
 
-const initialValue = [
-  { name: "Doing", id: _uniqueId("clm-"), cards: [] },
-  { name: "Done", id: _uniqueId("clm-"), cards: [] },
-];
-
-const useStore = (key) => {
+const useStore = (key, initialValue) => {
   const [columns, setColumns] = useState(() => {
     if (typeof window === "undefined") {
       return initialValue;
@@ -14,12 +8,11 @@ const useStore = (key) => {
 
     try {
       const item = JSON.parse(window.localStorage.getItem(key));
-      console.log(item);
       if (item) {
         return item;
       } else {
         window.localStorage.setItem(key, JSON.stringify(initialValue));
-        return initialValue;
+        return initialValue || [];
       }
     } catch (e) {
       return initialValue;
