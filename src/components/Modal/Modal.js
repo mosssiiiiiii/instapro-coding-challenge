@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import { Wrapper, ModalContent, Close } from "./style";
 
-const Modal = ({ open, children, onClose }) => {
+const Modal = ({ open, children, onClose, testId }) => {
   const [isOpen, setIsOpen] = useState(open);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const Modal = ({ open, children, onClose }) => {
   }
 
   return (
-    <Wrapper open={isOpen} onClick={handleCloseModal}>
+    <Wrapper data-testid={testId} open={isOpen} onClick={handleCloseModal}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
         <Close onClick={handleCloseModal}>&times;</Close>
         {children}

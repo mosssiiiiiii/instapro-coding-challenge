@@ -3,11 +3,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./setup/global.css";
 import reportWebVitals from "./reportWebVitals";
+import { initialValue } from "setup/constant";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Main />
+    <Main initialValue={initialValue} />
   </React.StrictMode>
 );
 

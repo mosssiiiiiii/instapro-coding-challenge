@@ -21,7 +21,7 @@ const Header = () => {
           <img alt="logo" src={LOGO_URL} />
           <Title>
             <h1>Instapro Code Challenge</h1>
-            <span>Trello simulator</span>
+            <span>By Mohsen Haghighatkhah</span>
           </Title>
         </Logo>
         <IconWrap>

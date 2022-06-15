@@ -3,7 +3,7 @@ import { useOutsideElement } from "hooks/useOutsideElement";
 import { useState, useRef } from "react";
 import { Wrapper, Title, ButtonWrap, CloseButton, AddButton } from "./style";
 
-const Add = ({ title, onClick }) => {
+const Add = ({ testId = "add-wrap", title, onClick }) => {
   const [show, setShow] = useState(false);
   const AddCardsOrLists = useRef(null);
   const ref = useRef();
@@ -14,7 +14,7 @@ const Add = ({ title, onClick }) => {
 
   return (
     <Wrapper
-      data-testid="add-wrap"
+      data-testid={testId}
       ref={AddCardsOrLists}
       onClick={() => setShow(true)}
     >
