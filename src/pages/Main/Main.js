@@ -4,8 +4,8 @@ import _uniqueId from "lodash/uniqueId";
 import { useMemo, useState } from "react";
 import useStore from "hooks/useStore";
 
-function Main() {
-  const [columns, setColumns] = useStore("column");
+function Main({ initialValue }) {
+  const [columns, setColumns] = useStore("column", initialValue);
 
   const [selectedCard, setSelectedCard] = useState(null);
   const selectedColumnIndex = useMemo(() => {

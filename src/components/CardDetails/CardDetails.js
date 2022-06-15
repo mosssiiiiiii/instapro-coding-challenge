@@ -65,7 +65,11 @@ const CardDetails = ({
   };
 
   return (
-    <Modal open={Boolean(selectedCard)} onClose={() => setSelectedCard(null)}>
+    <Modal
+      testId={`modal-${selectedCard.id}`}
+      open={Boolean(selectedCard)}
+      onClose={() => setSelectedCard(null)}
+    >
       <TitleWrap>
         <Title>{selectedCard?.name}</Title>
 
@@ -79,7 +83,11 @@ const CardDetails = ({
         />
       )}
 
-      <Select value={selectedColumn} onChange={(e) => cardMove(e)}>
+      <Select
+        data-testid="move-card-options"
+        value={selectedColumn}
+        onChange={(e) => cardMove(e)}
+      >
         {columns.map((item) => {
           return (
             <option key={item.id} value={item.id}>

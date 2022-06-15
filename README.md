@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Instapro Codding Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The project has been created based on Create-react-app. As has mentioned in the help file , this project is developed by any specific third party module and state management
+Actually, I wasn't sure about allowance to use React Context so I didn't use any state management even Context
+But if this parameter is important for you I can refactor my state by Context
 
-## Available Scripts
+For initialing your state , there is a constant in constant file is named initial value , so you can change this object and customize but as you probably know , you should follow the object instruction
 
-In the project directory, you can run:
+![alt text](https://gcdnb.pbrd.co/images/yYpUed6a0GpE.png?o=1)
 
-### `npm start`
+## Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React => CRA
+- lodash
+- moment
+- Jest
+- Testing Library
+- Eslint
+- Prettier
+- Docker
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I use just a third party module (styled-component) for handling styles
 
-### `npm test`
+## Run
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the project, First of all, you need to follow the below steps:
 
-### `npm run build`
+1. You have to have Nodejs installed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Clone the project from repository and open it with your prefered IDE.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Run yarn install in te root directory.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Development
 
-### `npm run eject`
+To run on development mode , you just need to run `yarn start`, then open http://localhost:3000 on your browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Production
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run on production mode , please run `yarn build`and then `yarn start`, afterward, open http://localhost:3000 on your browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Test
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To run test cases , please run `yarn test` .
 
-## Learn More
+## Test coverage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To run test cases with coverage, please run yarn test:coverage .
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Run with docker
 
-### Code Splitting
+To run the project with docker locally, you have to have docker installed and docker daemon started, then follow the below steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+1. Run docker build -t your-tag .
 
-### Analyzing the Bundle Size
+2. Run docker run -p 3000:3000 your-tag
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Finally, you can see your app run on top the docker on http://localhost:3000.
 
-### Making a Progressive Web App
+## Conclusion
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+I've tried to focus on showing the both my technical skills and technological knowledge in this project, It is so clear if I had enough time I would add another feature to complete the project but I mean time I did my best as possible as
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Cheers.

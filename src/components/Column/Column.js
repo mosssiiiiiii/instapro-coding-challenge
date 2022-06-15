@@ -27,16 +27,17 @@ const Column = ({ columns, setColumns, setSelectedCard }) => {
 
   return (
     <>
-      {columns.map((clm) => (
-        <Wrapper data-testid="column" key={clm.id}>
+      {columns.map((clm, index) => (
+        <Wrapper data-testid="column-wrap" key={clm.id}>
           <Title>{clm.name}</Title>
-          <ColumnItem>
+          <ColumnItem data-testid="column">
             <Card
               setSelectedCard={setSelectedCard}
               cards={clm.cards}
               columnId={clm.id}
             />
             <Add
+              testId={clm.id}
               title="Add a new card"
               onClick={(ref) => addCard(clm.id, ref)}
             />
