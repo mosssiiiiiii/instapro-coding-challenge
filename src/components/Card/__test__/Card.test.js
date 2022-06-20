@@ -15,15 +15,9 @@ const cardsMock = [
 
 describe("components > Card", () => {
   it("card rendering", () => {
-    expect.hasAssertions();
     render(<Card cards={cardsMock} />);
 
-    for (let item of cardsMock) {
-      expect(screen.queryAllByTestId(item.id).length).toEqual(1);
-      expect(screen.queryAllByTestId(item.id)).not.toHaveLength(5);
-    }
-
-    expect(screen.getByTestId("15")).toHaveTextContent("mohsen");
-    expect(screen.getByTestId("13")).toHaveTextContent("parisa");
+    expect(screen.getByTestId("crd-0")).toHaveTextContent("mohsen");
+    expect(screen.getByTestId("crd-1")).toHaveTextContent("parisa");
   });
 });

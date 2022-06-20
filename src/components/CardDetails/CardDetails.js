@@ -66,7 +66,7 @@ const CardDetails = ({
 
   return (
     <Modal
-      testId={`modal-${selectedCard.id}`}
+      testId="modal"
       open={Boolean(selectedCard)}
       onClose={() => setSelectedCard(null)}
     >

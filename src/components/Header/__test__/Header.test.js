@@ -9,7 +9,9 @@ describe("components > header", () => {
     expect(screen.getByTestId("header")).toHaveTextContent(
       "Instapro Code Challenge"
     );
-    expect(screen.getByTestId("header")).toHaveTextContent("Trello simulator");
+    expect(screen.getByTestId("header")).toHaveTextContent(
+      "By Mohsen Haghighatkhah"
+    );
     expect(screen.getByAltText("logo")).toHaveAttribute("src", LOGO_URL);
   });
 });
