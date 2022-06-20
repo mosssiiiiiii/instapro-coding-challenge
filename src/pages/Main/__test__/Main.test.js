@@ -25,8 +25,8 @@ describe("main page integration test", () => {
       "Doing"
     );
 
-    expect(screen.getByTestId("clm-3")).toBeInTheDocument();
-    await user.click(screen.getByTestId("clm-3"));
+    expect(screen.getByTestId("clm-0")).toBeInTheDocument();
+    await user.click(screen.getByTestId("clm-0"));
     expect(screen.getByTestId("add-input")).toBeInTheDocument();
     expect(screen.getByTestId("add-button")).toBeInTheDocument();
     await user.type(screen.getByTestId("add-input"), "This is a test card");
@@ -36,18 +36,21 @@ describe("main page integration test", () => {
       "This is a test card"
     );
 
-    expect(screen.getByTestId("crd-5")).toBeInTheDocument();
-    expect(screen.getByTestId("crd-5")).toHaveTextContent(
+    expect(screen.getByTestId("crd-0")).toBeInTheDocument();
+    expect(screen.getByTestId("crd-0")).toHaveTextContent(
       "This is a test card"
     );
 
-    await user.click(screen.getByTestId("crd-5"));
+    await user.click(screen.getByTestId("crd-0"));
     expect(screen.queryByTestId("add-input")).not.toBeInTheDocument();
     expect(screen.queryByTestId("add-button")).not.toBeInTheDocument();
 
-    expect(screen.getByTestId("modal-crd-5")).toBeInTheDocument();
+    expect(screen.getByTestId("modal")).toBeInTheDocument();
 
-    await user.selectOptions(screen.getByTestId("move-card-options"), "clm-4");
+    await user.selectOptions(
+      screen.getByTestId("move-card-options"),
+      screen.getByRole("option", { name: "Doing" })
+    );
 
     expect(screen.queryAllByTestId("column")[0]).not.toHaveTextContent(
       "This is a test card"

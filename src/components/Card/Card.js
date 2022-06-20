@@ -8,7 +8,7 @@ const Card = ({ cards, setSelectedCard, columnId }) => {
           onClick={() =>
             setSelectedCard({ ...crd, columnId: columnId, cardIndex: index })
           }
-          data-testid={crd.id}
+          data-testid={`crd-${index}`}
           key={crd.id}
         >
           <Title>{crd?.name}</Title>

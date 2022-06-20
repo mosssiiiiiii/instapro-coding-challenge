@@ -17,7 +17,6 @@ const Column = ({ columns, setColumns, setSelectedCard }) => {
       id: _uniqueId("crd-"),
       createdDate: moment().format("MMM Do YY"),
     };
-    console.log();
     cloneColumns.forEach((item) => {
       if (item.id === columnId) item.cards.push(card);
     });
@@ -37,7 +36,7 @@ const Column = ({ columns, setColumns, setSelectedCard }) => {
               columnId={clm.id}
             />
             <Add
-              testId={clm.id}
+              testId={`clm-${index}`}
               title="Add a new card"
               onClick={(ref) => addCard(clm.id, ref)}
             />
